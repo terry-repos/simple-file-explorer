@@ -1,6 +1,6 @@
 import {FC} from 'react'
 import styled from 'styled-components'
-import { DataItem } from '../types'
+import { DataItem } from '../../data/types'
 
 interface Props {
   dataItem: DataItem
