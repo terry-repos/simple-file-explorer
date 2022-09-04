@@ -6,7 +6,7 @@ export const computeLocationStrings = (
 
 ): string[] => {
   const locations: string[] = [];
-  const { level, itemName, parent } = currNavPoint;
+  const { level, itemName } = currNavPoint;
   let parentName = itemName;
   const levelToTraverseTo = Math.max(0, level)
 

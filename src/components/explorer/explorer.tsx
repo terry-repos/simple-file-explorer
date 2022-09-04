@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import CreateGeneric from '../createGeneric/createGeneric';
 
 import SearchAutoComplete from '../searchAutoComplete/searchAutoComplete'
@@ -6,7 +6,7 @@ import DataItemComp from '../dataItemComp/dataItemComp'
 import FileModal from '../fileModal/fileModal'
 import styled from 'styled-components';
 
-import { DataItem, DataInfo, NavPoint } from '../../data/types';
+import { DataItem } from '../../data/types';
 import { useDataStore } from '../../data/store';
 
 const Explorer: FC = () => {
@@ -66,8 +66,6 @@ const Explorer: FC = () => {
     const incomingSearchStr = event.currentTarget.value;
     performSearch(incomingSearchStr)
   }
-
-  console.log("data:", data, " currIndexInHistory: ", currIndexInHistory, "navHistory: ", navHistory, " currNavPoint: ", currNavPoint, " locationItems: ", locationItems," locationStrings: ", locationStrings, " navHistory: ", navHistory)
 
   const inSearchMode = state.searchStr !== "";
 
