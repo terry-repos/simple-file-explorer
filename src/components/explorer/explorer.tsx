@@ -97,7 +97,7 @@ const Explorer: FC = () => {
             {locationItems.map((dataItem, dI) =>
               <DataItemComp key={`dataItem_${dI}`} dataItem={dataItem} onSelectItem={selectItemDirectly} />)}
 
-            <DataCountInfo>{locationDataInfo.nFolders} folders(s) {locationDataInfo.nFiles} file(s</DataCountInfo>
+            <DataCountInfo><BoldSpan>{locationDataInfo.nFolders}</BoldSpan> folder(s) <BoldSpan>{locationDataInfo.nFiles}</BoldSpan> file(s)</DataCountInfo>
           </>)
           :
           (<>
@@ -168,6 +168,11 @@ const CreateItemsContainer = styled.div`
   flex-direction: row;
 `
 
+const BoldSpan = styled.span`
+  font-weight: bold;
+
+`
+
 const ItemsContainer = styled.div`
   display: flex;
 
@@ -185,7 +190,16 @@ const NavContainer = styled.div`
   flex-direction: row;
 `
 
-const NavButton = styled.button`
+const NavButton = styled.button<{ disabled: boolean }>`
+  border-color: navy;
+  color: white;
+  background-color: navy;
+  ${({ disabled }) => {
+  if (disabled) {
+    return "background-color: white; border-color: #eee;"
+    }
+  }}
+
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;

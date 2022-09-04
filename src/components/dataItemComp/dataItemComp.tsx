@@ -47,7 +47,7 @@ const Thumbnail = styled.div<{isFile: boolean}>`
   display: flex;
   user-select: none;
   ${({ isFile }) => {
-    return (isFile) ? 'color: #aaa; background-color: none; color:border-color: #696;' : 'background-color:#99aaaa;  border-color: #669999;'  }}
+    return (isFile) ? 'color: #aaa; background-color: none; color:border-color: navy;' : 'background-color:rgba(0,0,255,0.2);  border-color: rgba(0,0,80,0.4);'  }}
 `
 
 const Filename = styled.div`
